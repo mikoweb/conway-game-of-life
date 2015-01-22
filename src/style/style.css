@@ -1,0 +1,135 @@
+#body {
+    -fx-background-color: #fff;
+    -fx-alignment: top-center;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+    -fx-border-width: 0;
+    -fx-border-style: none;
+    -fx-padding: 0;
+}
+
+Label {
+    -fx-font-weight: bold;
+}
+
+Button {
+    -fx-background-color: #337ab7;
+    -fx-background-radius: 4px;
+    -fx-background-insets: 0;
+    -fx-text-fill: #fff;
+    -fx-font-size: 15px;
+    -fx-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -fx-padding: 8px 15px;
+    -fx-border-width: 0;
+    -fx-border-style: none;
+    -fx-border-radius: 4px;
+}
+
+Button:hover {
+    -fx-background-color: #2c6499;
+}
+
+Button:pressed {
+    -fx-background-color: linear-gradient(#2c6499, #337ab7);
+}
+
+Button:disabled {
+    -fx-background-color: #42adf9;
+}
+
+.text-field {
+    -fx-background-color: #fff;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-color: #dcdcdc;
+    -fx-padding: 8px 10px;
+}
+
+#toolbar {
+    -fx-padding: 20px;
+    -fx-hgap: 20px;
+}
+
+#toolbar .col-right {
+    -fx-alignment: top-right;
+}
+
+#toolbar FlowPane {
+    -fx-hgap: 6px;
+    -fx-vgap: 6px;
+}
+
+#toolbar Separator {
+    -fx-padding: 0 10px;
+}
+
+#toolbar Label {
+    -fx-font-size: 11px;
+    -fx-padding: 0 0 2px 0;
+}
+
+#toolbar Label.label-large {
+    -fx-font-size: 13px;
+}
+
+#fieldRefreshRate {
+    -fx-pref-width: 100px;
+}
+
+#boxBoardSize {
+    -fx-alignment: top-right;
+}
+
+.board-container {
+    -fx-alignment: center;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+    -fx-border-width: 0;
+    -fx-border-style: none;
+    -fx-padding: 0;
+    -fx-effect: null;
+    -fx-background-insets: 0;
+}
+
+.board-container > .viewport {
+    -fx-background-color: #000;
+}
+
+#board {
+    -fx-alignment: top-center;
+    -fx-hgap: 5px;
+    -fx-vgap: 5px;
+    -fx-padding: 20px;
+}
+
+#board > .btn-board {
+    -fx-pref-width: 20px;
+    -fx-pref-height: 20px;
+    -fx-min-height: 20px;
+    -fx-min-width: 20px;
+    -fx-background-color: #fff;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-cursor: hand;
+}
+
+#board > .btn-board.active {
+    -fx-background-color: #099d48;
+}
+
+#board > .btn-board:hover {
+    -fx-background-color: #c7c7c7;
+}
+
+#board > .btn-board.active:hover {
+    -fx-background-color: #047d05;
+}
+
+#fieldBoardSize {
+    -fx-show-tick-labels: true;
+    -fx-show-tick-marks: true;
+    -fx-pref-width: 180px;
+    -fx-alignment: top-right;
+}

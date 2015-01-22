@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import control.BoardGrid?>
+
+<?import javafx.scene.control.Button?>
+<?import control.RestrictiveTextField?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Label?>
+
+<VBox fx:id="body"
+   fx:controller="application.Controller"
+   xmlns="http://javafx.com/javafx/8"
+   xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane fx:id="toolbar">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75"/>
+            <ColumnConstraints hgrow="SOMETIMES" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <FlowPane styleClass="col-left" GridPane.columnIndex="0">
+               <children>
+                  <Button fx:id="btnStart" onAction="#startAction">Start</Button>
+                  <Button fx:id="btnStop" onAction="#stopAction" disable="true">Stop</Button>
+                  <Button fx:id="btnNext" onAction="#nextIterationAction">Następna</Button>
+                  <Button fx:id="btnRand" onAction="#randCellAction">Losuj</Button>
+                  <Button fx:id="btnClear" onAction="#clearAction">Czyść</Button>
+                  <Separator orientation="VERTICAL" />
+                  <VBox>
+                     <children>
+                        <Label>częstotliwość</Label>
+                        <RestrictiveTextField styleClass="text" fx:id="fieldRefreshRate" restrict="[0-9]" maxLength="6" onKeyReleased="#changeRefreshRangeAction"/>
+                     </children>
+                  </VBox>
+               </children>
+            </FlowPane>
+            <FlowPane styleClass="col-right" GridPane.columnIndex="1">
+               <children>
+                  <VBox fx:id="boxBoardSize">
+                     <children>
+                        <Label styleClass="label-large">rozmiar</Label>
+                        <Slider fx:id="fieldBoardSize" blockIncrement="1" majorTickUnit="10" min="1" max="60" />
+                     </children>
+                  </VBox>
+               </children>
+            </FlowPane>
+         </children>
+      </GridPane>
+      <ScrollPane styleClass="board-container">
+         <content>
+            <BoardGrid fx:id="board" />
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>
+

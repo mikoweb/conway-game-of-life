@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Gra-w-zycie">
+    <output-path>$PROJECT_DIR$/out/artifacts/Gra-w-zycie</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="application.Main" />
+        <option name="description" value="" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="Gra w życie" />
+        <option name="vendor" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Gra-w-zycie.jar">
+        <element id="module-output" name="gra-w-zycie" />
+      </element>
+    </root>
+  </artifact>
+</component>
